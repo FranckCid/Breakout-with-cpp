@@ -1,20 +1,22 @@
 # depslib dependency file v1.0
-1462055258 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/main.cpp
+1462065826 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<iostream>
 	<time.h>
 	<unistd.h>
+	<vector>
 	"Game.h"
 	"Paddle.h"
 	"Ball.h"
+	"Blocks.h"
 	<SDL/SDL.h>
 
-1462050572 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/Paddle.h
+1462065345 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/Paddle.h
 	"GameObject.h"
 	<SDL/SDL.h>
 
-1462053665 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/Paddle.cpp
+1462065355 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/Paddle.cpp
 	"Game.h"
 	"Paddle.h"
 
@@ -25,18 +27,24 @@
 	<cstdlib>
 	<stdlib.h>
 
-1462050549 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/Ball.h
+1462064918 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/Ball.h
 	"GameObject.h"
 	<SDL/SDL.h>
 
-1462050687 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/Ball.cpp
+1462065938 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/Ball.cpp
 	"Game.h"
 	"Ball.h"
 
-1462053130 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/GameObject.h
+1462064940 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/GameObject.h
 	<SDL/SDL.h>
 
 1462053731 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/GameObject.cpp
 	"GameObject.h"
 	<SDL/SDL.h>
+
+1462064327 source:/home/franck/Documentos/Git/Breakout-with-cpp/Breakout/src/Blocks.cpp
+	"Blocks.h"
+
+1462064557 /home/franck/Documentos/Git/Breakout-with-cpp/Breakout/include/Blocks.h
+	"GameObject.h"
 

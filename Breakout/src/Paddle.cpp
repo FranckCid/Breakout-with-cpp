@@ -10,7 +10,11 @@ Paddle::Paddle()
     rect = {x, y, w, h};
 }
 
+void Paddle::Move(){
+    rect.x += velx;
+}
+
 void Paddle::Move(int dir){
-    rect.x += dir;
+    rect.x += dir * velx;
 }
 

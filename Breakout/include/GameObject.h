@@ -7,6 +7,7 @@ class GameObject
 {
     public:
         SDL_Rect rect;
+        int velx=1, vely=1;
         GameObject();
         bool Intersects(SDL_Rect r);
     protected:

@@ -9,6 +9,7 @@ class Paddle : public GameObject
 {
     public:
         Paddle();
+        void Move();
         void Move(int dir);
 };
 

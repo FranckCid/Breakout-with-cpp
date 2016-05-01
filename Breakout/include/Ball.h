@@ -8,7 +8,6 @@
 class Ball : public GameObject
 {
     public:
-        int velx=1, vely=1;
         Ball();
         void Move();
         void RestartBall();
