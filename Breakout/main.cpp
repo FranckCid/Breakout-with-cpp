@@ -23,7 +23,6 @@ void DrawScreen();
 void Quit();
 
 SDL_Event event;
-int starttime=0, endtime=0, delta=0;
 
 int main ( int argc, char** argv )
 {
@@ -31,9 +30,13 @@ int main ( int argc, char** argv )
 
     Load();
 
+    const int FPS = 30;
+    Uint32 start;
+    float frame = 0;
+
     while(running){
 
-        starttime = SDL_GetTicks();
+        start = SDL_GetTicks();
 
         SDL_PollEvent(&event);
 
@@ -44,13 +47,13 @@ int main ( int argc, char** argv )
         Logic();
         DrawScreen();
 
-        std::cout << starttime << " : " << endtime << " | " << delta << "\n";
-
-        endtime = SDL_GetTicks();
-
-        delta = endtime - starttime;
-
-        usleep(100 * delta);
+        frame += 0.2;
+        if(frame > 10){
+            frame = 0;
+        }
+        if(1000/FPS > SDL_GetTicks()-start){
+            SDL_Delay(1000/FPS-(SDL_GetTicks()-start));
+        }
 
     }
 
@@ -88,9 +91,9 @@ void Logic(){
     Uint8 *keystates = SDL_GetKeyState(NULL);
 
     if(keystates[SDLK_a] && player.rect.x > 0){
-        player.Move(-1);
+        player.Move(-10);
     }else if(keystates[SDLK_d] && player.rect.x + player.rect.w < Game::SCREEN_W){
-        player.Move(1);
+        player.Move(10);
     }
 
     if(player.Intersects(ball.rect)){

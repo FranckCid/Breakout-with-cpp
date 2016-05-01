@@ -27,6 +27,6 @@ void Ball::RestartBall(){
 
     rect = {x, y, w, h};
 
-    velx = Game::nprand();
-    vely = 1;
+    velx = Game::nprand()+10;
+    vely = 1+10;
 }
